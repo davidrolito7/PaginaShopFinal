@@ -1,0 +1,27 @@
+<table class="table table-striped-columns">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Marca</th>
+            <th scope="col">Modelo</th>
+            <th scope="col">Operaciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of employees">
+            <th scope="row">1</th>
+            <td>{{ emp.Modelo }}</td>
+            <td>{{ emp.Marca }}</td>
+            <td>{{ emp.created_at }}</td>
+        </tr>
+    </tbody>
+</table>
+<div>
+    <label for="">Personas</label>
+    <select >
+        <option *ngFor="let emp of employees" >{{ emp.Marca }}</option>
+    </select>
+</div>
+<select name="Moto_ID" id="">
+
+</select>

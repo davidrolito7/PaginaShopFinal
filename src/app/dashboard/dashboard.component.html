@@ -1,11 +1,8 @@
-
-<router-outlet>
-    <!--app-sidenav>
+<div class="fondo">
+    <app-sidenav (onToggleSideNav)="onToggleSideNav($event)">
         <app-body>
             [collapsed]="isSideNavCallapsed"
             [screenWidth]="screenWidth"
         </app-body>
-
-    </app-sidenav]-->
-  
-</router-outlet>
+    </app-sidenav>
+</div>

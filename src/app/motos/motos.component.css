@@ -1,0 +1,5 @@
+.table-right-align {
+    float: center; /* Alinea la tabla a la derecha */
+    /* También puedes usar 'margin-left: auto;' para alinear la tabla */
+  }
+  

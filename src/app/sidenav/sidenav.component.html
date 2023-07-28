@@ -1,0 +1,45 @@
+<div>
+    <nav class="navbar">
+        <!-- Lado Izquierdo: Icono de Menú y Logo -->
+        <div class="navbar-left">
+            <div class="menu-icon">&#9776;</div> <!-- Icono de Menú (Usando el símbolo ☰ como ejemplo) -->
+            <div class="logo">
+                <img src="../../assets/img/logonav.jpg" alt="">
+
+            </div>
+        </div>
+        <div class="navbar-center">
+            <span class="welcome-text aling-text-center">BIENVENIDO A MOTOSPORT</span>
+        </div>
+
+        <!-- Lado Derecho: Botón de Salir -->
+        <div class="navbar-right">
+            <button class="btn-salir" (click)="openDialog('0ms', '0ms')">Salir</button>
+        </div>
+    </nav>
+</div>
+
+<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed':''">
+
+    <div class="logo-container">
+        <button class="logo" (click)="toggleCollapse()">RyF</button>
+        <div class="logo-text" *ngIf="collapsed">MENU</div>
+        <button class="btn-close" *ngIf="collapsed" (click)="closeSidenav()">
+            <i class="fal fa-times close-icon"></i>
+        </button>
+    </div>
+
+    <ul class="sidenav-nav">
+        <img src="../../assets/img/usuario.jpg" alt="User Avatar" class="user-avatar">
+
+        <li class="sidenav-nav-item" *ngFor="let data of navData">
+            <a class="sidenav-nav-link" [routerLink]="[data.routelink]"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact:true}"
+            >
+                <i class="sidenav-link-icon" [class]="data.icon"></i>
+                <span class="sidenav-link-text" *ngIf="collapsed">{{data.label}}</span>
+            </a>
+        </li>
+    </ul>
+</div>

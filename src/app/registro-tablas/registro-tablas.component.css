@@ -1,0 +1,60 @@
+/* Agregamos estilos generales al contenedor */
+.container {
+  position: relative;
+  max-width: 800px; /* Puedes ajustar el ancho máximo según tus necesidades */
+  margin: 0 auto;
+}
+
+/* Agregamos la imagen de fondo */
+.fondo {
+  background-image: url('registro_tablas2.jpg'); /* Reemplaza 'ruta_de_la_imagen.jpg' con la ruta de tu imagen */
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+/* Agregamos estilos específicos al formulario para hacerlo más legible */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.8); /* Cambia la opacidad para ajustar la visibilidad del formulario */
+}
+
+#tema-center {
+  font-size: 24px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.input-container {
+  margin-bottom: 20px;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+button {
+  width: 100%;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* Estilos adicionales para mejorar la apariencia de los elementos */
+mat-form-field {
+  font-size: 16px;
+}
+
+mat-icon {
+  margin-right: 8px;
+}

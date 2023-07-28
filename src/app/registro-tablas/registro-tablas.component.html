@@ -1,0 +1,137 @@
+<div class="fondo">
+<app-sidenav>
+    <app-body>
+        [collapsed]="isSideNavCallapsed"
+        [screenWidth]="screenWidth"
+    </app-body>
+
+</app-sidenav>
+
+    <div class="container d-flex justify-content-center align-items-center">
+        <ng-container *ngIf="(asyncTabs | async) === null">
+            Loading tabs...
+        </ng-container>
+
+        <mat-tab-group>
+            <mat-tab *ngFor="let tab of asyncTabs | async">
+                <ng-template mat-tab-label>{{tab.label}}</ng-template>
+
+
+                <ng-container *ngIf="tab.content === 'motoForm'">
+                    <form class="formulario" (submit)="onSubmitMotoForm()">
+                        <h1 id="tema-center"><i>REGISTRE UNA NUEVA MOTO</i></h1>
+
+                        <div class="input-container">
+                            <label for="marca">Ingrese la marca</label>
+                            <mat-form-field class="example-full-width">
+                                <input matInput type="string" placeholder="Marca" name="marca" id="marca" [(ngModel)]="motomarca"
+                                    required />
+                            </mat-form-field>
+                        </div>
+
+                        <div class="input-container">
+                            <label for="modelo">Ingrese el modelo</label>
+                            <mat-form-field class="example-full-width">
+                                <input matInput type="string" placeholder="Modelo" name="modelo" id="modelo" [(ngModel)]="motomodelo"
+                                    required />
+                            </mat-form-field>
+                        </div>
+
+                        <div class="button-container">
+                            <button mat-raised-button color="primary" (click)="onSubmit()"><mat-icon>plus_one</mat-icon> Añadir</button>
+                        </div>
+                    </form>
+                </ng-container>
+
+
+                <ng-container *ngIf="tab.content == 'caracteristicas'">
+                    <form class="formulario" (submit)="onSubmitMotoForm()">
+                        <h1 id="tema-center"><i>REGISTRE UNA NUEVA CARACTERISTICA</i></h1>
+
+                        <div class="input-container">
+                            <label for="marca">Ingrese una nueva caracteristica</label>
+                            <mat-form-field class="example-full-width">
+                                <input matInput type="String" placeholder="Caracteristica" name="caracteristica" id="caracteristicas"
+                                    [(ngModel)]="motocarac" required />
+                            </mat-form-field>
+                        </div>
+
+                        <div class="button-container">
+                            <button mat-raised-button color="primary" (click)="onCarac()"><mat-icon>plus_one</mat-icon> Añadir</button>
+                        </div>
+                    </form>
+                </ng-container>
+
+
+                <ng-container *ngIf="tab.content === 'usuForm'">
+                    <form class="formulario" (submit)="onSubmitMotoForm()">
+                        <h1 id="tema-center"><i>REGISTRESE</i></h1>
+
+                        <table class="example-full-width " cellspacing="4">
+                            <p style="color: black; margin-left: 50px;"> Nombre: </p>
+                            <p style="color: black; text-align:right;margin-top: -35px;margin-right: -90px;"> Apellido:
+                            </p>
+                            <tr>
+
+                                <td><mat-form-field class="example-full-width nb ">
+                                        <mat-label>Nombre: </mat-label>
+                                        <input matInput type="String" placeholder="Nombre" name="nombre" id="nombre"
+                                    [(ngModel)]="usunombre" required />
+                                    </mat-form-field>
+                                </td>
+                                <td><mat-form-field class="example-full-width nb1">
+
+                                        <mat-label>Apellido</mat-label>
+                                        <input matInput type="String" placeholder="Apellido" name="apellido" id="apellido"
+                                    [(ngModel)]="usuapellido" required />
+                                    </mat-form-field>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="example-full-width " cellspacing="4">
+                            <p style="color: black; margin-left: 50px;"> Correo: </p>
+                            <p style="color: black; text-align:right;margin-top: -35px;margin-right: -90px;"> Telefono:
+                            </p>
+                            <tr>
+
+                                <td><mat-form-field class="example-full-width nb ">
+                                        <mat-label>Correo</mat-label>
+                                        <input matInput type="String" placeholder="Correo" name="correo" id="correo"
+                                    [(ngModel)]="usucorreo" required pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$" />
+                                    </mat-form-field>
+                                </td>
+                                <td><mat-form-field class="example-full-width nb1">
+
+                                        <mat-label>Telefono</mat-label>
+                                        <input matInput type="String" placeholder="Telefono" name="telefono" id="telefono"
+                                    [(ngModel)]="usutel" required />
+                                    </mat-form-field>
+                                </td>
+                            </tr>
+
+                        </table>
+                        <table class="example-full-width" cellspacing="2">
+                            <p style="color: black; margin-left: 50px;"> Contraseña: </p>
+                            
+
+                            <tr>
+                                <td><mat-form-field class="example-full-width nb">
+                                        <mat-label>Contraseña</mat-label>
+                                        <input matInput type="String" placeholder="Contraseña" name="contraseña" id="contraseña"
+                                    [(ngModel)]="usupass" required />
+                                    </mat-form-field></td>
+                                
+                            </tr>
+                        </table>
+
+                        <div class="button-container">
+                            <button mat-raised-button color="primary" (click)="onUsuarios()"><mat-icon>plus_one</mat-icon> Añadir</button>
+                        </div>
+                    </form>
+                </ng-container>
+
+
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+</div>

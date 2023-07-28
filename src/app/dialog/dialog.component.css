@@ -1,0 +1,45 @@
+.mat-dialog-container {
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco y transparente */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 20px; /* Espaciado interno */
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+  max-width: 400px; /* Ancho máximo del diálogo */
+  text-align: center; /* Centrar el contenido */
+}
+
+h1 {
+  color:blue;
+  font-size: 28px; /* Tamaño del título */
+  margin: 0 0 20px; /* Espaciado inferior para separar el título del contenido */
+}
+.tex{
+  color:black;
+}
+#carita {
+  
+  display: contents;
+  font-size: 70px; /* Tamaño de la carita triste */
+  vertical-align: middle; /* Alinear verticalmente con el texto */
+}
+
+.mat-dialog-actions {
+  display: flex; /* Mostrar los botones en línea */
+  justify-content: center; /* Centrar los botones horizontalmente */
+  margin-top: 20px; /* Espaciado superior para separar los botones del contenido */
+}
+
+button {
+  background-color: #2196F3; /* Color de fondo del botón */
+  color: #fff; /* Color del texto del botón */
+  border: none; /* Sin borde */
+  border-radius: 4px; /* Bordes redondeados */
+  padding: 10px 20px; /* Espaciado interno del botón */
+  cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+  transition: background-color 0.2s; /* Transición suave del color de fondo */
+}
+
+button:hover {
+  background-color: #1976D2; /* Color de fondo del botón al pasar el cursor */
+}
+
+  

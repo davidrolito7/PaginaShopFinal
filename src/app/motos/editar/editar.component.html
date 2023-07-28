@@ -1,0 +1,29 @@
+<div class="container-modal">
+    <form class="formulario" (submit)="onSubmitMotoForm()">
+        <h1 id="tema-center"><i>REGISTRE UNA NUEVA MOTO</i></h1>
+
+        <div class="input-container">
+            <label for="marca">Ingrese la marca</label>
+            <mat-form-field class="example-full-width">
+                <input matInput type="string" placeholder="Marca" name="marca" id="marca" [(ngModel)]="motomarca"
+                    required />
+            </mat-form-field>
+        </div>
+
+        <div class="input-container">
+            <label for="modelo">Ingrese el modelo</label>
+            <mat-form-field class="example-full-width">
+                <input matInput type="string" placeholder="Modelo" name="modelo" id="modelo" [(ngModel)]="motomodelo"
+                    required />
+            </mat-form-field>
+        </div>
+
+
+        <div mat-dialog-actions>
+            <button mat-button mat-dialog-close class="mat-button cancelar" (click)="cancelar()">Cancelar</button>
+            <button mat-button mat-dialog-close cdkFocusInitial class="mat-button aceptar"
+                (click)="editar()">Actualizar</button>
+        </div>
+    </form>
+
+</div>

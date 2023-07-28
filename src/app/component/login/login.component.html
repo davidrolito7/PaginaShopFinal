@@ -1,0 +1,49 @@
+<section class="container-main">
+    <div class="container-imagen-center">
+        <img src="../../../assets/img/logo.jpg" class="imagen-izquierda">
+    </div>
+    <div class="form-container">
+        <div class="container-examen">
+
+            <form class="example-form" #userForm="ngForm" (ngSubmit)="submitForm(userForm)">
+                <h1 id="tema"><i>INICIE SESION</i></h1>
+                <p style="color: black;">Ingrese su correo</p>
+                <p class="margen">
+                    <mat-form-field class="example-full-width ">
+                        <mat-label>Correo</mat-label>
+                        <input matInput placeholder="usuario@gmail.com" name="usuario.correo" [(ngModel)]="correo"
+                            required pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$" />
+                    </mat-form-field>
+                </p>
+                <p style="color: black;">Ingrese su contraseña</p>
+                <table cellspacing="2">
+                    <tr>
+                        <td>
+                            <mat-form-field class="example-full-width">
+                                <mat-label>Contraseña</mat-label>
+                                <input matInput placeholder="Ex.hola123" name="c" ngModel required>
+                            </mat-form-field>
+                        </td>
+                    </tr>
+                </table>
+                <section class="button-container">
+
+                    <div class="example-button-row">
+                        <p><br></p>
+                        <button (click)="submitForm(userForm)" mat-fab extended
+                            color="primary"><mat-icon>favorite</mat-icon> INGRESAR
+                        </button>
+                    </div>
+                </section>
+                <section class="boton-contraseña">
+                    <div class="example-button-row">
+                        <p><br></p>
+                      <button (click)="registro()" mat-button>Crear cuenta</button>
+                      
+                    </div>
+                  </section>
+
+            </form>
+        </div>
+    </div>
+</section>
