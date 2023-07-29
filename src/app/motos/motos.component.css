@@ -2,4 +2,10 @@
     float: center; /* Alinea la tabla a la derecha */
     /* También puedes usar 'margin-left: auto;' para alinear la tabla */
   }
-  
+  .fondo {
+    background-image: url('dashboard2.jpg'); /* Reemplaza 'ruta_de_la_imagen.jpg' con la ruta de tu imagen */
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+  }

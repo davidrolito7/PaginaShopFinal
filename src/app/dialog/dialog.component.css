@@ -29,8 +29,9 @@ h1 {
 }
 
 button {
-  background-color: #2196F3; /* Color de fondo del botón */
-  color: #fff; /* Color del texto del botón */
+  background-color: #c7b43f; /* Color de fondo del botón */
+  color:  #000000; /* Color del texto del botón */
+  justify-content: center;
   border: none; /* Sin borde */
   border-radius: 4px; /* Bordes redondeados */
   padding: 10px 20px; /* Espaciado interno del botón */

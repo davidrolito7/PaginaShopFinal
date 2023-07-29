@@ -15,18 +15,21 @@ export class EditarComponent {
   motomarca: string = ''; 
   motomodelo: string = '';
   motoid: number;
+  motoimg: string = ''; 
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: any, private router: Router,public dialogRef: MatDialogRef<EditarComponent>,private servicio: DataService,) {
     // Aquí asignamos los valores recibidos de emp a las variables motomarca y motomodelo
     this.motoid=data.id;
     this.motomarca = data.Marca;
     this.motomodelo = data.Modelo;
+    this.motoimg=data.Img;
   }
 
   onSubmitMotoForm() {
-    console.log('Nombre de la moto ingresado:', this.motomarca);
-    console.log('Nombre de la moto ingresado:', this.motomodelo);
-    console.log('Caracteristica de la moto:', this.motoid);
+    console.log('Nombre del producto:', this.motomarca);
+    console.log('Modelo', this.motomodelo);
+    console.log('Precio', this.motoimg);
+    console.log('Ca', this.motoid);
   }
 
 
@@ -41,17 +44,18 @@ export class EditarComponent {
       
       Marca: this.motomarca,
       Modelo: this.motomodelo,
+      Img:this.motoimg
     };
 
     this.servicio.actualizarMoto(this.motoid,formData).subscribe((data:RegistroTablasComponent)=>{
-      alert("dato agregado")
-        alert("Moto actualizada correctamente");
+      alert("DATO ACTUALIZADO")
+       
         this.dialogRef.close();
         this.router.navigate(['/motos']);
       },
       (error) => {
         console.error(error);
-        alert("Error al actualizar la moto");
+        alert("ERROR AL GUARDAR");
       }
     )
   }

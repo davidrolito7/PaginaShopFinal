@@ -1,5 +1,5 @@
 .sidenav{
-    background: black;
+    background: rgb(255, 255, 255);
     transition: all .5s ease;
     position: fixed;
     z-index: 1;
@@ -68,7 +68,8 @@
             display: flex;
             align-items: center;
             height: 3rem;
-            color: #f3f3f3;
+            color: #000000; 
+            /*cambiar color de los iconos*/
             text-decoration: none;
             border-radius: 0.625rem;
             transition: all .3s ease;
@@ -89,8 +90,8 @@
 }
 .sidenav-nav-item:hover{
     .sidenav-nav-link{
-        background-color: #fff;
-        color: #000;   
+        background-color: #ffffff;
+        color: #ffffff;   
     }
         
 }
@@ -101,11 +102,11 @@
     margin-right: 5px;
   }
 .active{
-  background-color: #fff;
+  background-color: #000000;
 
   .sidenav-link-icon,
   .sidenav-link-text{
-    color: #000;
+    color: #ffffff;
 
 
   }
@@ -115,7 +116,7 @@
     left: -250px; /* Menú inicialmente oculto */
     width: 250px;
     height: 100%;
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     transition: left 0.3s ease;
   }
   
@@ -145,8 +146,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: black; /* Color de fondo del navbar (puedes cambiarlo) */
-    color: #fff; /* Color del texto (puedes cambiarlo) */
+    background-color: rgb(255, 233, 233); /* Color de fondo del navbar (puedes cambiarlo) */
+    color: #000000; /* Color del texto (puedes cambiarlo) */
     padding: 10px;
   }
   
@@ -184,7 +185,7 @@
   }
   
   .btn-salir {
-    background-color: #ff0000; /* Color de fondo del botón (puedes cambiarlo) */
+    background-color: #000000; /* Color de fondo del botón (puedes cambiarlo) */
     color: #fff; /* Color del texto del botón (puedes cambiarlo) */
     border: none;
     padding: 8px 16px;

@@ -3,13 +3,13 @@
         <!-- Lado Izquierdo: Icono de Menú y Logo -->
         <div class="navbar-left">
             <div class="menu-icon">&#9776;</div> <!-- Icono de Menú (Usando el símbolo ☰ como ejemplo) -->
-            <div class="logo">
+            <!-- <div class="logo">
                 <img src="../../assets/img/logonav.jpg" alt="">
 
-            </div>
+            </div> -->
         </div>
         <div class="navbar-center">
-            <span class="welcome-text aling-text-center">BIENVENIDO A MOTOSPORT</span>
+            <span class="welcome-text aling-text-center">OAXACA SHOP</span>
         </div>
 
         <!-- Lado Derecho: Botón de Salir -->
@@ -22,7 +22,7 @@
 <div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed':''">
 
     <div class="logo-container">
-        <button class="logo" (click)="toggleCollapse()">RyF</button>
+        <button class="logo" (click)="toggleCollapse()"></button>
         <div class="logo-text" *ngIf="collapsed">MENU</div>
         <button class="btn-close" *ngIf="collapsed" (click)="closeSidenav()">
             <i class="fal fa-times close-icon"></i>
@@ -30,7 +30,7 @@
     </div>
 
     <ul class="sidenav-nav">
-        <img src="../../assets/img/usuario.jpg" alt="User Avatar" class="user-avatar">
+      <!-- <img src="" alt="User Avatar" class="user-avatar">--> 
 
         <li class="sidenav-nav-item" *ngFor="let data of navData">
             <a class="sidenav-nav-link" [routerLink]="[data.routelink]"

@@ -1,10 +1,8 @@
 <div class="container-modal">
-    <h1 mat-dialog-title>Confirmar cierre de sesión</h1>
-    <div mat-dialog-content>
-        <p>¿Estás seguro de que deseas cerrar la sesión?</p>
-    </div>
+    <h1 mat-dialog-title>CERRAR SESIÓN</h1>
+    
     <div mat-dialog-actions>
-        <button mat-button mat-dialog-close class="mat-button cancelar" (click)="seguir()">NO</button>
-        <button mat-button mat-dialog-close cdkFocusInitial class="mat-button aceptar" (click)="cerrar()">SI</button>
+        <button mat-button mat-dialog-close class="mat-button " (click)="seguir()">NO</button>
+        <button mat-button mat-dialog-close cdkFocusInitial class="mat-warn" (click)="cerrar()">SI</button>
     </div>
 </div>

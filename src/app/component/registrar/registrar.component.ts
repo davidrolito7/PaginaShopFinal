@@ -78,11 +78,11 @@ export class RegistrarComponent implements OnInit {
       Telefono: this.usutel,
     };
     this.servicio.createuser(formData).subscribe((data:RegistroTablasComponent)=>{
-      alert("dato agregado")
+      alert("USUARIO AGREGADO")
     this.route.navigate(['/principal'])},
     (error)=>{
     console.error(error);
-    alert("no se agrego")
+    alert("ERROR AL AGREGAR")
     
     })
   }

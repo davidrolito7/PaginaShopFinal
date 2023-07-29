@@ -1,9 +1,17 @@
 <div class="container-modal">
     <form class="formulario" (submit)="onSubmitMotoForm()">
-        <h1 id="tema-center"><i>REGISTRE UNA NUEVA MOTO</i></h1>
+        <h1 id="tema-center"><i>CAMBIAR VALORES</i></h1>
 
         <div class="input-container">
-            <label for="marca">Ingrese la marca</label>
+            <label for="modelo">MODELO</label>
+            <mat-form-field class="example-full-width">
+                <input matInput type="string" placeholder="Modelo" name="modelo" id="modelo" [(ngModel)]="motomodelo"
+                    required />
+            </mat-form-field>
+        </div>
+        
+        <div class="input-container">
+            <label for="marca">TALLA</label>
             <mat-form-field class="example-full-width">
                 <input matInput type="string" placeholder="Marca" name="marca" id="marca" [(ngModel)]="motomarca"
                     required />
@@ -11,13 +19,12 @@
         </div>
 
         <div class="input-container">
-            <label for="modelo">Ingrese el modelo</label>
+            <label for="modelo"> PRECIO MNX$ </label>
             <mat-form-field class="example-full-width">
-                <input matInput type="string" placeholder="Modelo" name="modelo" id="modelo" [(ngModel)]="motomodelo"
+                <input matInput type="string" placeholder="precio" name="Img" id="Img" [(ngModel)]="motoimg"
                     required />
             </mat-form-field>
         </div>
-
 
         <div mat-dialog-actions>
             <button mat-button mat-dialog-close class="mat-button cancelar" (click)="cancelar()">Cancelar</button>

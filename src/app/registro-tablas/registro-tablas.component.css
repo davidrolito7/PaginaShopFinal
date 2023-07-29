@@ -7,7 +7,7 @@
 
 /* Agregamos la imagen de fondo */
 .fondo {
-  background-image: url('registro_tablas2.jpg'); /* Reemplaza 'ruta_de_la_imagen.jpg' con la ruta de tu imagen */
+  background-image: url('registro_tablas.jpg'); /* Reemplaza 'ruta_de_la_imagen.jpg' con la ruta de tu imagen */
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
@@ -30,6 +30,7 @@
 #tema-center {
   font-size: 24px;
   text-align: center;
+  
   margin: 20px 0;
 }
 

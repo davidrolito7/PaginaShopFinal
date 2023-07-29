@@ -8,6 +8,7 @@ import { DataService } from 'src/app/service/data.service';
 })
 export class UsuariosComponent implements OnInit{
   employees:any;
+  selectedMoto:any;
 
   constructor(private dataService:DataService){}
   ngOnInit(): void {
@@ -30,6 +31,11 @@ export class UsuariosComponent implements OnInit{
         console.log(error);
       }
     );
+  }
+  openModal(moto: any) {
+
+    this.selectedMoto = moto;
+    console.log(this.selectedMoto);
   }
 
 

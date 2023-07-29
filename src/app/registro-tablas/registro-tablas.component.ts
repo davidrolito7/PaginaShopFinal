@@ -19,7 +19,7 @@ export class RegistroTablasComponent {
   asyncTabs: Observable<ExampleTab[]>;
   motomarca: string = ''; 
   motomodelo: string = '';
-
+  motoimg:string = '';
   motocarac: string='';
 
   usunombre: string='';
@@ -33,8 +33,8 @@ export class RegistroTablasComponent {
     this.asyncTabs = new Observable((observer: Observer<ExampleTab[]>) => {
       setTimeout(() => {
         observer.next([
-          { label: 'Registro Motos', content: 'motoForm' },
-          { label: 'Registro Caracteristicas', content: 'caracteristicas' },
+          { label: 'Registro de prendas', content: 'motoForm' },
+        //  { label: 'Registro Caracteristicas', content: 'caracteristicas' },
           { label: 'Registro Usuarios', content: 'usuForm' },
         ]);
       }, 1000);
@@ -42,8 +42,9 @@ export class RegistroTablasComponent {
   }
 
   onSubmitMotoForm() {
-    console.log('Nombre de la moto ingresado:', this.motomarca);
-    console.log('Nombre de la moto ingresado:', this.motomodelo);
+    console.log('Precio:', this.motomodelo);
+    console.log('Modelo:', this.motomarca);
+    console.log('Precio:', this.motoimg);
     console.log('Caracteristica de la moto:', this.motocarac);
     console.log('Nombre usuario:', this.usunombre);
     console.log('Nombre apellido:', this.usuapellido);
@@ -56,6 +57,7 @@ export class RegistroTablasComponent {
     const formData = {
       Marca: this.motomarca, 
       Modelo: this.motomodelo, 
+      Img:this.motoimg
     };
     this.servicio.createmoto(formData).subscribe((data:RegistroTablasComponent)=>{
       alert("dato agregado")
@@ -91,11 +93,11 @@ export class RegistroTablasComponent {
       Telefono: this.usutel,
     };
     this.servicio.createuser(formData).subscribe((data:RegistroTablasComponent)=>{
-      alert("dato agregado")
+      alert("DATO AGREGADO")
     this.route.navigate(['/registrodatos'])},
     (error)=>{
     console.error(error);
-    alert("no se agrego")
+    alert("ERROR AL AGREGAR")
     this.route.navigate(['/registrodatos'])
     })
   }

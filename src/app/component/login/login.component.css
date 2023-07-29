@@ -21,7 +21,7 @@
   text-align: center;
   margin-top: 50px;
   margin-bottom: 30px;
-  color: rgb(17, 109, 74);
+  color: rgb(0, 0, 0);
 }
 /* Estilos para el párrafo */
 #parrafo {
@@ -35,12 +35,14 @@
   flex-direction: column;
   align-items: center;
   border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .example-full-width {
   margin-left: 0;
   margin-right: 170px;
   width: 100%;
+  
 }
 
 
@@ -77,10 +79,12 @@
 
 .example-button-row button {
   padding: 12px 40px;
-  font-size: 16px;
+  font-size: 16px; 
+  background-color:#c7b43f;
+  color: black;
 }
 
 .boton-contraseña button {
-  color: #385898;
+ 
   text-decoration: underline;
 }

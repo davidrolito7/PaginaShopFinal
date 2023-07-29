@@ -5,35 +5,38 @@
     </app-body>
 </app-sidenav>
 <p><br><br></p>
+<div class="fondo">
 <div class="container d-flex justify-content-center align-items-center">
-    <table class="table table-dark ">
+     <table class="table table-dark ">
         <thead class="table-dark">
             <tr>
                 <th scope="col">ID</th>
                 <th scope="col">MODELO</th>
-                <th scope="col">MARCA</th>
-                <th scope="col">CARACTERISTICAS</th>
-                <th scope="col"></th>
+                <th scope="col">TALLA</th>
+                <th scope="col">PRECIO MNX$</th>
+                <th scope="col">OPCIONES</th>
+                
 
             </tr>
         </thead>
-        <tbody class="table-info">
+        <tbody class="table-light">
             <tr *ngFor="let emp of employees">
                 <td>{{emp.id}}</td>
                 <td>{{ emp.Modelo }}</td>
                 <td>{{ emp.Marca }}</td>
-                <td>
+                <td>{{ emp.Img }}</td>
+                <!-- <td>
                     <ul>
                       <li *ngFor="let caracteristica of emp.caracteristicas">
                         {{ caracteristica.Nombre }}
                       </li>
                     </ul>
-                </td>
+                </td> -->
                 <td>
-                    <a data-bs-target="#exampleModal" class="btn btn-small btn-primary" (click)="openDialog(emp)" ><i class="fal fa-edit"></i></a>
-                    <a data-bs-target="#exampleModal" class="btn btn small btn-danger" (click)="eliminarMoto(emp.id)"><i class="fal fa-trash-alt"></i></a>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" 
-            data-bs-target="#exampleModal" (click)="openModal(emp)">ver </button>
+                  <a data-bs-target="#exampleModal" class="btn btn-small btn-warning" (click)="openDialog(emp)" ><i class="fal fa-pencil-alt"></i></a>
+                  <a data-bs-target="#exampleModal" class="btn btn-small btn-dark" (click)="eliminarMoto(emp.id)"><i class="fal fa-trash-alt"></i></a>
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" 
+          data-bs-target="#exampleModal" (click)="openModal(emp)"><i class="fal fa-eye"></i> </button>
                 </td>
             </tr>
         </tbody>
@@ -44,14 +47,15 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" >Información de la Moto</h1>
+          <h1 class="modal-title fs-5" >Detalles prenda</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body" *ngIf="selectedMoto">
             <p>ID: {{ selectedMoto.id }}</p>
-            <p>Marca: {{ selectedMoto.Marca }}</p>
             <p>Modelo: {{ selectedMoto.Modelo }}</p>
-            <p>Características:</p>
+            <p>Marca: {{ selectedMoto.Marca }}</p>
+            <p>Precio: {{ selectedMoto.Img }}</p>
+           
             <ul>
               <li *ngFor="let caracteristica of selectedMoto?.caracteristicas">
                 {{ caracteristica.Nombre }}
@@ -61,8 +65,9 @@
           
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary">Guardar cambios</button>
+        <!-- <button type="button" class="btn btn-primary">Guardar cambios</button>--> 
         </div>
       </div>
     </div>
+  </div>
   </div>

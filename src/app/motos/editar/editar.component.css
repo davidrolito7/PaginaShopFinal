@@ -27,7 +27,7 @@
   border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: rgba(255, 255, 255, 0.8); /* Cambia la opacidad para ajustar la visibilidad del formulario */
+  background-color: #c7b43f; /* Cambia la opacidad para ajustar la visibilidad del formulario */
 }
 
 #tema-center {

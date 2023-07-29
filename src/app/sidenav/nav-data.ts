@@ -2,13 +2,13 @@ export const navbarData = [
   {
     routelink: "/principal",
     icon: 'fal fa-home',
-    label: 'Dashboard',
+    label: 'Menu',
 
   },
   {
     routelink: "/motos",
-    icon: 'fal fa-motorcycle',
-    label: 'Motocicletas',
+    icon: 'fal fa-tshirt',
+    label: 'Ropa',
 
   },
   {
@@ -19,7 +19,7 @@ export const navbarData = [
   },
   {
     routelink: "/registrodatos",
-    icon: 'fal fa-file-import',
+    icon: 'fal fa-plus',
     label: 'Registro',
 
   },
